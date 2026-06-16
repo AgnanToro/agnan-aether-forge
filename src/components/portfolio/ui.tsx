@@ -126,19 +126,33 @@ export function MagneticButton({
     ghost: "text-foreground hover:bg-secondary/40",
   } as const;
 
-  const MotionTag = (as === "a" ? motion.a : motion.button) as typeof motion.button;
+  const cls = `${base} ${variants[variant]} ${className}`;
+
+  if (as === "a") {
+    return (
+      <motion.a
+        ref={ref}
+        href={href}
+        onMouseMove={handleMove}
+        onMouseLeave={reset}
+        style={{ x: sx, y: sy }}
+        className={cls}
+      >
+        {children}
+      </motion.a>
+    );
+  }
 
   return (
-    <MotionTag
-      ref={ref as never}
-      href={href}
+    <motion.button
+      ref={ref}
       onMouseMove={handleMove}
       onMouseLeave={reset}
       style={{ x: sx, y: sy }}
-      className={`${base} ${variants[variant]} ${className}`}
-      {...(props as Record<string, unknown>)}
+      className={cls}
+      {...props}
     >
       {children}
-    </MotionTag>
+    </motion.button>
   );
 }
