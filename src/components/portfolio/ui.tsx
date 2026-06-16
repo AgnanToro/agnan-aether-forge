@@ -82,7 +82,11 @@ export function SectionHeading({
   );
 }
 
-interface MagneticButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface MagneticButtonProps
+  extends Omit<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    "onAnimationStart" | "onAnimationEnd" | "onDragStart" | "onDragEnd" | "onDrag"
+  > {
   children: ReactNode;
   variant?: "primary" | "ghost" | "outline";
   as?: "button" | "a";
