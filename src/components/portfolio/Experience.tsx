@@ -41,12 +41,8 @@ export function Experience() {
                         {exp.period}
                       </span>
                     </div>
-                    <p className="mt-1 text-sm font-medium text-primary">
-                      {exp.company}
-                    </p>
-                    <p className="mt-3 text-sm text-muted-foreground">
-                      {exp.description}
-                    </p>
+                    <p className="mt-1 text-sm font-medium text-primary">{exp.company}</p>
+                    <p className="mt-3 text-sm text-muted-foreground">{exp.description}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {exp.tech.map((t) => (
                         <span

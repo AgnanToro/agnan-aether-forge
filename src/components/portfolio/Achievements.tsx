@@ -40,9 +40,7 @@ export function Achievements() {
                     {item.tag}
                   </span>
                   <h3 className="mt-3 text-base font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
                 </div>
               </motion.div>
             );

@@ -45,16 +45,11 @@ export function Skills() {
                         <div className="flex items-center justify-between text-sm">
                           <span className="flex items-center gap-2 font-medium">
                             <span className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-secondary/40">
-                              <SkillIcon
-                                className="h-4 w-4"
-                                style={{ color }}
-                              />
+                              <SkillIcon className="h-4 w-4" style={{ color }} />
                             </span>
                             {skill.name}
                           </span>
-                          <span className="text-muted-foreground">
-                            {skill.level}%
-                          </span>
+                          <span className="text-muted-foreground">{skill.level}%</span>
                         </div>
                         <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-secondary/60">
                           <motion.div
@@ -75,20 +70,18 @@ export function Skills() {
         </motion.div>
 
         <Reveal className="mt-10 flex flex-wrap justify-center gap-2.5">
-          {SKILL_GROUPS.flatMap((g) => g.skills.map((s) => s.name)).map(
-            (name) => {
-              const { Icon: SkillIcon, color } = getSkillIcon(name);
-              return (
-                <span
-                  key={name}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/30 px-3.5 py-1.5 text-xs font-medium text-foreground/80 transition-colors hover:border-primary hover:text-primary"
-                >
-                  <SkillIcon className="h-3.5 w-3.5" style={{ color }} />
-                  {name}
-                </span>
-              );
-            },
-          )}
+          {SKILL_GROUPS.flatMap((g) => g.skills.map((s) => s.name)).map((name) => {
+            const { Icon: SkillIcon, color } = getSkillIcon(name);
+            return (
+              <span
+                key={name}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/30 px-3.5 py-1.5 text-xs font-medium text-foreground/80 transition-colors hover:border-primary hover:text-primary"
+              >
+                <SkillIcon className="h-3.5 w-3.5" style={{ color }} />
+                {name}
+              </span>
+            );
+          })}
         </Reveal>
       </div>
     </section>

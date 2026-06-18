@@ -4,11 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { PROJECTS } from "../lib/portfolio-data";
 import { SubNav } from "../components/portfolio/SubNav";
 import { Footer } from "../components/portfolio/Footer";
-import {
-  SectionHeading,
-  staggerContainer,
-  staggerItem,
-} from "../components/portfolio/ui";
+import { SectionHeading, staggerContainer, staggerItem } from "../components/portfolio/ui";
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
@@ -89,9 +85,7 @@ function AllProjects() {
                   <div className="flex flex-1 flex-col p-5">
                     <p className="text-xs font-medium text-primary">{p.category}</p>
                     <h3 className="mt-1 text-base font-semibold">{p.title}</h3>
-                    <p className="mt-2 flex-1 text-sm text-muted-foreground">
-                      {p.description}
-                    </p>
+                    <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.description}</p>
                     <div className="mt-4 flex items-center gap-1.5 text-sm font-medium text-primary">
                       View Details
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

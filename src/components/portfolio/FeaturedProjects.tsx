@@ -62,13 +62,9 @@ export function FeaturedProjects() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-base font-semibold">{p.title}</h3>
                   {p.subtitle && (
-                    <p className="mt-0.5 text-xs font-medium text-primary">
-                      {p.subtitle}
-                    </p>
+                    <p className="mt-0.5 text-xs font-medium text-primary">{p.subtitle}</p>
                   )}
-                  <p className="mt-2 flex-1 text-sm text-muted-foreground">
-                    {p.description}
-                  </p>
+                  <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.description}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {p.tech.slice(0, 4).map((t) => (
                       <span

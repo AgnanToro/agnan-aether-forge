@@ -19,8 +19,7 @@ export function Footer() {
             <span className="text-gradient">Agnan Toro</span>
           </button>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            Full Stack Developer & AI Enthusiast building scalable, intelligent
-            digital solutions.
+            Full Stack Developer & AI Enthusiast building scalable, intelligent digital solutions.
           </p>
         </div>
 

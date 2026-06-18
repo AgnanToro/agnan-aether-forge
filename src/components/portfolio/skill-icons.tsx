@@ -13,13 +13,8 @@ import {
   SiProxmox,
   SiPython,
 } from "react-icons/si";
-import {
-  Webhook,
-  BrainCircuit,
-  MessageSquareHeart,
-  FileText,
-  Bot,
-} from "lucide-react";
+
+import { Webhook, BrainCircuit, MessageSquareHeart, FileText, Bot } from "lucide-react";
 
 interface IconMeta {
   Icon: ComponentType<{ className?: string; style?: CSSProperties }>;

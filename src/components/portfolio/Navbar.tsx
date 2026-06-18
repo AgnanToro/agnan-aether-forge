@@ -63,9 +63,7 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className={`flex w-full max-w-5xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 ${
-          scrolled
-            ? "glass shadow-[var(--shadow-soft)]"
-            : "border border-transparent"
+          scrolled ? "glass shadow-[var(--shadow-soft)]" : "border border-transparent"
         }`}
       >
         <button

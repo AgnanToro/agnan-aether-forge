@@ -17,9 +17,9 @@ export const NAV_LINKS = [
 
 export const ABOUT_FACTS = [
   { label: "University", value: "Universitas Islam Sultan Agung" },
-  { label: "GPA", value: "3.85 / 4.00" },
+  { label: "GPA", value: "3.78 / 4.00" },
   { label: "Location", value: "Semarang, Indonesia" },
-  { label: "Career Focus", value: "Full Stack & AI Engineering" },
+  { label: "Career Focus", value: "Full Stack Developer" },
 ];
 
 export const EXPERIENCES = [
@@ -76,6 +76,30 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+   {
+    slug: "internify",
+    title: "Internify",
+    subtitle: "AI Internship Recommendation Platform",
+    category: "AI Platform",
+    year: "2025",
+    status: "building",
+    description:
+      "Platform rekomendasi magang berbasis AI yang mencocokkan mahasiswa dengan peluang relevan.",
+    overview:
+      "Internify menggunakan sistem rekomendasi untuk mencocokkan profil, skill, dan minat mahasiswa dengan lowongan magang yang paling relevan. Setiap rekomendasi disertai skor kecocokan sehingga mahasiswa dapat memprioritaskan peluang terbaik.",
+    highlights: [
+      "Recommendation engine berbasis profil & skill mahasiswa",
+      "Match score untuk setiap lowongan magang",
+      "Manajemen lowongan untuk perusahaan mitra",
+      "Filter cerdas berdasarkan lokasi, bidang, dan durasi",
+    ],
+    tech: ["Laravel", "React", "Recommendation System", "Python"],
+    accent: "from-[#5b21b6] to-[#8b5cf6]",
+    image: internifyImg,
+    github: "https://github.com/",
+    demo: "#",
+    featured: true,
+  },
   {
     slug: "helpdesk-ticketing",
     title: "Helpdesk Internal Ticketing System",
@@ -122,37 +146,14 @@ export const PROJECTS: Project[] = [
     demo: "#",
     featured: true,
   },
-  {
-    slug: "internify",
-    title: "Internify",
-    subtitle: "AI Internship Recommendation Platform",
-    category: "AI Platform",
-    year: "2025",
-    status: "building",
-    description:
-      "Platform rekomendasi magang berbasis AI yang mencocokkan mahasiswa dengan peluang relevan.",
-    overview:
-      "Internify menggunakan sistem rekomendasi untuk mencocokkan profil, skill, dan minat mahasiswa dengan lowongan magang yang paling relevan. Setiap rekomendasi disertai skor kecocokan sehingga mahasiswa dapat memprioritaskan peluang terbaik.",
-    highlights: [
-      "Recommendation engine berbasis profil & skill mahasiswa",
-      "Match score untuk setiap lowongan magang",
-      "Manajemen lowongan untuk perusahaan mitra",
-      "Filter cerdas berdasarkan lokasi, bidang, dan durasi",
-    ],
-    tech: ["Laravel", "React", "Recommendation System", "Python"],
-    accent: "from-[#5b21b6] to-[#8b5cf6]",
-    image: internifyImg,
-    github: "https://github.com/",
-    demo: "#",
-    featured: true,
-  },
+ 
   {
     slug: "sibaca",
     title: "SIBACA",
     subtitle: "Sistem Balance Cairan Terintegrasi",
     category: "Healthcare System",
     year: "2025",
-    status: "building",
+    status: "completed",
     description:
       "Sistem kesehatan untuk memantau keseimbangan cairan pasien secara real-time dan terintegrasi.",
     overview:
@@ -166,8 +167,8 @@ export const PROJECTS: Project[] = [
     tech: ["Laravel", "React", "Healthcare System", "MySQL"],
     accent: "from-[#4c1d95] to-[#6d28d9]",
     image: sibacaImg,
-    github: "https://github.com/",
-    demo: "#",
+    github: "https://github.com/AgnanToro/Sibaca",
+    demo: "https://sibaca-sistem-balance-cairan.vercel.app/",
     featured: true,
   },
   {
@@ -242,8 +243,7 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     year: "2024",
     status: "completed",
-    description:
-      "Aplikasi pemesanan katering dengan paket langganan dan manajemen menu.",
+    description: "Aplikasi pemesanan katering dengan paket langganan dan manajemen menu.",
     overview:
       "SEA Catering memudahkan pelanggan memesan paket katering dan langganan makanan, lengkap dengan manajemen menu dan pesanan untuk admin.",
     highlights: [
@@ -262,8 +262,7 @@ export const PROJECTS: Project[] = [
     category: "Utility",
     year: "2023",
     status: "completed",
-    description:
-      "Kalkulator pembagian waris Islam (faraidh) yang akurat dan mudah digunakan.",
+    description: "Kalkulator pembagian waris Islam (faraidh) yang akurat dan mudah digunakan.",
     overview:
       "Aplikasi yang menghitung pembagian harta waris sesuai kaidah faraidh berdasarkan ahli waris yang dimasukkan, dengan penjelasan hasil yang transparan.",
     highlights: [
@@ -302,8 +301,7 @@ export const PROJECTS: Project[] = [
     category: "Reporting",
     year: "2024",
     status: "completed",
-    description:
-      "Sistem pelaporan digital untuk mempermudah pengajuan dan pemantauan laporan.",
+    description: "Sistem pelaporan digital untuk mempermudah pengajuan dan pemantauan laporan.",
     overview:
       "E-Lapor SPTI memungkinkan pengguna mengirim laporan secara digital dan memantau status tindak lanjutnya secara transparan.",
     highlights: [
@@ -322,8 +320,7 @@ export const PROJECTS: Project[] = [
     category: "Productivity",
     year: "2023",
     status: "completed",
-    description:
-      "Aplikasi produktivitas untuk manajemen tugas dan kebiasaan harian.",
+    description: "Aplikasi produktivitas untuk manajemen tugas dan kebiasaan harian.",
     overview:
       "ProductiveMe membantu pengguna mengelola daftar tugas, melacak kebiasaan, dan tetap fokus pada target harian mereka.",
     highlights: [
@@ -342,8 +339,7 @@ export const PROJECTS: Project[] = [
     category: "Web App",
     year: "2024",
     status: "completed",
-    description:
-      "Aplikasi web modern dengan fokus pada pengalaman pengguna yang mulus.",
+    description: "Aplikasi web modern dengan fokus pada pengalaman pengguna yang mulus.",
     overview:
       "Raizen adalah aplikasi web yang menekankan antarmuka modern, performa cepat, dan pengalaman pengguna yang mulus.",
     highlights: [
@@ -433,14 +429,12 @@ export const ACHIEVEMENTS = [
   },
   {
     title: "Technical Workshops",
-    description:
-      "Aktif mengikuti workshop pengembangan perangkat lunak modern, DevOps, dan AI.",
+    description: "Aktif mengikuti workshop pengembangan perangkat lunak modern, DevOps, dan AI.",
     tag: "Workshops",
   },
   {
     title: "Professional Certifications",
-    description:
-      "Sertifikasi di bidang web development, backend engineering, dan dasar-dasar AI.",
+    description: "Sertifikasi di bidang web development, backend engineering, dan dasar-dasar AI.",
     tag: "Certifications",
   },
   {
@@ -458,7 +452,7 @@ export const ACHIEVEMENTS = [
 ];
 
 export const SOCIALS = {
-  github: "https://github.com/",
-  linkedin: "https://linkedin.com/",
-  email: "agnantoro@example.com",
+  github: "https://github.com/AgnanToro",
+  linkedin: "https://linkedin.com/in/agnantoro",
+  email: "agnankun18@gmail.com",
 };

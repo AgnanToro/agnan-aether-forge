@@ -13,10 +13,7 @@ import { Statistics } from "../components/portfolio/Statistics";
 import { Achievements } from "../components/portfolio/Achievements";
 import { Contact } from "../components/portfolio/Contact";
 import { Footer } from "../components/portfolio/Footer";
-import {
-  MouseSpotlight,
-  ScrollProgress,
-} from "../components/portfolio/effects";
+import { MouseSpotlight, ScrollProgress } from "../components/portfolio/effects";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,8 +30,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:description",
-        content:
-          "Building scalable web applications and intelligent digital solutions.",
+        content: "Building scalable web applications and intelligent digital solutions.",
       },
     ],
   }),

@@ -35,9 +35,7 @@ function ProjectNotFound() {
       <SubNav />
       <main className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
         <h1 className="text-3xl font-bold">Project not found</h1>
-        <p className="mt-2 text-muted-foreground">
-          Proyek yang kamu cari tidak tersedia.
-        </p>
+        <p className="mt-2 text-muted-foreground">Proyek yang kamu cari tidak tersedia.</p>
         <Link
           to="/projects"
           className="mt-6 inline-flex items-center gap-2 rounded-full gradient-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
@@ -52,9 +50,7 @@ function ProjectNotFound() {
 
 function ProjectDetail() {
   const { project: p } = Route.useLoaderData();
-  const related = PROJECTS.filter(
-    (x) => x.slug !== p.slug && x.featured,
-  ).slice(0, 3);
+  const related = PROJECTS.filter((x) => x.slug !== p.slug && x.featured).slice(0, 3);
 
   return (
     <>
@@ -93,11 +89,7 @@ function ProjectDetail() {
             <h1 className="mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
               <span className="text-gradient">{p.title}</span>
             </h1>
-            {p.subtitle && (
-              <p className="mt-2 text-base font-medium text-primary">
-                {p.subtitle}
-              </p>
-            )}
+            {p.subtitle && <p className="mt-2 text-base font-medium text-primary">{p.subtitle}</p>}
           </motion.div>
 
           {p.image && (
@@ -120,9 +112,7 @@ function ProjectDetail() {
           <div className="mt-10 grid gap-10 lg:grid-cols-[1.6fr_1fr]">
             <div>
               <h2 className="text-xl font-semibold">Overview</h2>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                {p.overview}
-              </p>
+              <p className="mt-3 leading-relaxed text-muted-foreground">{p.overview}</p>
 
               <h2 className="mt-10 text-xl font-semibold">Key Highlights</h2>
               <ul className="mt-4 space-y-3">
@@ -208,9 +198,7 @@ function ProjectDetail() {
                     )}
                     <div className="p-4">
                       <p className="text-sm font-semibold">{r.title}</p>
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {r.category}
-                      </p>
+                      <p className="mt-1 text-xs text-muted-foreground">{r.category}</p>
                     </div>
                   </Link>
                 ))}

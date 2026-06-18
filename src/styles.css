@@ -64,7 +64,7 @@
   --popover-foreground: #111827;
 
   --primary: #130924;
-  --primary-foreground: #f8fafc;
+  --primary-foreground: #130924;
 
   --secondary: #f8f5ff;
   --secondary-foreground: #130924;
@@ -91,17 +91,13 @@
   --glass-bg: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(76, 29, 149, 0.18);
 
-  --gradient-aurora: radial-gradient(
-      55% 60% at 15% 12%,
-      var(--aurora-1) 0%,
-      transparent 60%
-    ),
+  --gradient-aurora:
+    radial-gradient(55% 60% at 15% 12%, var(--aurora-1) 0%, transparent 60%),
     radial-gradient(45% 55% at 85% 18%, var(--aurora-3) 0%, transparent 55%),
     radial-gradient(60% 60% at 50% 100%, var(--aurora-2) 0%, transparent 60%);
   --gradient-primary: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
   --gradient-text: linear-gradient(120deg, #130924 0%, #4c1d95 55%, #7c3aed 100%);
-  --shadow-glow: 0 0 0 1px rgba(76, 29, 149, 0.15),
-    0 18px 50px -12px rgba(76, 29, 149, 0.45);
+  --shadow-glow: 0 0 0 1px rgba(76, 29, 149, 0.15), 0 18px 50px -12px rgba(76, 29, 149, 0.45);
   --shadow-soft: 0 10px 40px -16px rgba(19, 9, 36, 0.25);
 
   --sidebar: #f8f5ff;
@@ -124,7 +120,7 @@
   --popover-foreground: #f8fafc;
 
   --primary: #7c3aed;
-  --primary-foreground: #f8fafc;
+  --primary-foreground: #7c3aed;
 
   --secondary: #26124a;
   --secondary-foreground: #f8fafc;
@@ -151,17 +147,13 @@
   --glass-bg: rgba(19, 9, 36, 0.55);
   --glass-border: rgba(124, 58, 237, 0.25);
 
-  --gradient-aurora: radial-gradient(
-      55% 60% at 15% 12%,
-      var(--aurora-1) 0%,
-      transparent 60%
-    ),
+  --gradient-aurora:
+    radial-gradient(55% 60% at 15% 12%, var(--aurora-1) 0%, transparent 60%),
     radial-gradient(45% 55% at 85% 18%, var(--aurora-3) 0%, transparent 55%),
     radial-gradient(60% 60% at 50% 100%, var(--aurora-2) 0%, transparent 60%);
   --gradient-primary: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
   --gradient-text: linear-gradient(120deg, #f8fafc 0%, #c4b5fd 45%, #7c3aed 100%);
-  --shadow-glow: 0 0 0 1px rgba(124, 58, 237, 0.25),
-    0 24px 60px -12px rgba(124, 58, 237, 0.55);
+  --shadow-glow: 0 0 0 1px rgba(124, 58, 237, 0.25), 0 24px 60px -12px rgba(124, 58, 237, 0.55);
   --shadow-soft: 0 18px 50px -20px rgba(0, 0, 0, 0.8);
 
   --sidebar: #130924;
@@ -237,7 +229,8 @@
 }
 
 @utility grid-pattern {
-  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
 }

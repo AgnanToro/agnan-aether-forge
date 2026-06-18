@@ -35,11 +35,10 @@ export function About() {
           <div>
             <Reveal>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Mahasiswa Teknik Informatika Universitas Islam Sultan Agung
-                dengan minat pada Full Stack Development, Backend Engineering,
-                Artificial Intelligence, dan NLP. Memiliki pengalaman magang
-                industri dan pengalaman membangun berbagai sistem enterprise
-                serta aplikasi berbasis web modern.
+                Mahasiswa Teknik Informatika Universitas Islam Sultan Agung dengan minat pada Full
+                Stack Development, Backend Engineering, Artificial Intelligence, dan NLP. Memiliki
+                pengalaman magang industri dan pengalaman membangun berbagai sistem enterprise serta
+                aplikasi berbasis web modern.
               </p>
             </Reveal>
 
@@ -56,9 +55,7 @@ export function About() {
                         <p className="text-xs uppercase tracking-wider text-muted-foreground">
                           {fact.label}
                         </p>
-                        <p className="mt-0.5 text-sm font-semibold">
-                          {fact.value}
-                        </p>
+                        <p className="mt-0.5 text-sm font-semibold">{fact.value}</p>
                       </div>
                     </div>
                   </Reveal>

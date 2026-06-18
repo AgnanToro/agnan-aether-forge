@@ -15,11 +15,7 @@ import {
 import { MagneticButton } from "./ui";
 import { AuroraBackground } from "./effects";
 
-const ROLES = [
-  "Full Stack Developer",
-  "Backend Engineer",
-  "AI Enthusiast",
-];
+const ROLES = ["Full Stack Developer", "Backend Engineer", "AI Enthusiast"];
 
 function useTypewriter(words: string[]) {
   const [index, setIndex] = useState(0);
@@ -131,10 +127,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.45 }}
           className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground"
         >
-          Saya adalah mahasiswa Teknik Informatika yang berfokus pada Full Stack
-          Development, Backend Engineering, dan Artificial Intelligence. Saya
-          senang membangun solusi digital yang modern, scalable, dan memberikan
-          dampak nyata bagi pengguna.
+          Saya adalah mahasiswa Teknik Informatika yang berfokus pada Full Stack Development,
+          Backend Engineering, dan Artificial Intelligence. Saya senang membangun solusi digital
+          yang modern, scalable, dan memberikan dampak nyata bagi pengguna.
         </motion.p>
 
         <motion.div
@@ -143,9 +138,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.55 }}
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
-          <MagneticButton onClick={() => scrollTo("#projects")}>
-            View Projects
-          </MagneticButton>
+          <MagneticButton onClick={() => scrollTo("#projects")}>View Projects</MagneticButton>
           <MagneticButton variant="outline">
             <Download className="h-4 w-4" />
             Download Resume

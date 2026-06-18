@@ -1,9 +1,5 @@
 import { motion, useMotionValue, useSpring, type Variants } from "framer-motion";
-import {
-  useRef,
-  type ButtonHTMLAttributes,
-  type ReactNode,
-} from "react";
+import { useRef, type ButtonHTMLAttributes, type ReactNode } from "react";
 
 /** Scroll-reveal wrapper. */
 export function Reveal({
@@ -58,11 +54,7 @@ export function SectionHeading({
 }) {
   return (
     <Reveal
-      className={
-        align === "center"
-          ? "mx-auto max-w-2xl text-center"
-          : "max-w-2xl text-left"
-      }
+      className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl text-left"}
     >
       {eyebrow && (
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
@@ -74,19 +66,16 @@ export function SectionHeading({
         <span className="text-gradient">{title}</span>
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-          {subtitle}
-        </p>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground">{subtitle}</p>
       )}
     </Reveal>
   );
 }
 
-interface MagneticButtonProps
-  extends Omit<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    "onAnimationStart" | "onAnimationEnd" | "onDragStart" | "onDragEnd" | "onDrag"
-  > {
+interface MagneticButtonProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "onAnimationStart" | "onAnimationEnd" | "onDragStart" | "onDragEnd" | "onDrag"
+> {
   children: ReactNode;
   variant?: "primary" | "ghost" | "outline";
   as?: "button" | "a";
@@ -125,8 +114,7 @@ export function MagneticButton({
   const variants = {
     primary:
       "bg-[var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-glow)] hover:brightness-110",
-    outline:
-      "border border-border bg-secondary/30 text-foreground hover:bg-secondary/60",
+    outline: "border border-border bg-secondary/30 text-foreground hover:bg-secondary/60",
     ghost: "text-foreground hover:bg-secondary/40",
   } as const;
 

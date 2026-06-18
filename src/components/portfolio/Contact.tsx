@@ -77,9 +77,7 @@ export function Contact() {
                 <Mail className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                  Email
-                </p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground">Email</p>
                 <p className="text-sm font-semibold">{SOCIALS.email}</p>
               </div>
             </a>
@@ -93,9 +91,7 @@ export function Contact() {
                 <Github className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                  GitHub
-                </p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground">GitHub</p>
                 <p className="text-sm font-semibold">@agnantoro</p>
               </div>
             </a>
@@ -109,27 +105,18 @@ export function Contact() {
                 <Linkedin className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                  LinkedIn
-                </p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground">LinkedIn</p>
                 <p className="text-sm font-semibold">Agnan Toro</p>
               </div>
             </a>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-4 rounded-2xl glass p-6"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl glass p-6">
               <Field id="name" label="Name" />
               <Field id="email" label="Email" type="email" />
               <Field id="message" label="Message" textarea />
-              <MagneticButton
-                type="submit"
-                className="w-full"
-                disabled={sending}
-              >
+              <MagneticButton type="submit" className="w-full" disabled={sending}>
                 {sending ? "Sending..." : "Send Message"}
                 <Send className="h-4 w-4" />
               </MagneticButton>
