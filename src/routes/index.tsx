@@ -4,7 +4,6 @@ import { Toaster } from "../components/ui/sonner";
 import { LoadingScreen } from "../components/portfolio/LoadingScreen";
 import { Navbar } from "../components/portfolio/Navbar";
 import { Hero } from "../components/portfolio/Hero";
-import { CurrentlyBuilding } from "../components/portfolio/CurrentlyBuilding";
 import { About } from "../components/portfolio/About";
 import { Experience } from "../components/portfolio/Experience";
 import { FeaturedProjects } from "../components/portfolio/FeaturedProjects";
@@ -53,7 +52,6 @@ function Index() {
       <Navbar />
       <main className="relative overflow-hidden">
         <Hero />
-        <CurrentlyBuilding />
         <About />
         <Experience />
         <FeaturedProjects />

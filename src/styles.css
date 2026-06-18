@@ -242,6 +242,12 @@
   background-size: 48px 48px;
 }
 
+/* Gradient fill applied as background-image (a gradient is NOT a valid
+   background-color, so bg-[var(--gradient-primary)] renders transparent). */
+@utility gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);

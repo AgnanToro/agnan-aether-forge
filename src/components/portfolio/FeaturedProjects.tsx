@@ -1,7 +1,8 @@
+import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
-import { FEATURED_PROJECTS, OTHER_PROJECTS } from "../../lib/portfolio-data";
-import { Reveal, SectionHeading, staggerContainer, staggerItem } from "./ui";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { FEATURED_PROJECTS } from "../../lib/portfolio-data";
+import { MagneticButton, SectionHeading, staggerContainer, staggerItem } from "./ui";
 
 export function FeaturedProjects() {
   return (
@@ -21,92 +22,85 @@ export function FeaturedProjects() {
           className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           {FEATURED_PROJECTS.map((p) => (
-            <motion.article
-              key={p.title}
-              variants={staggerItem}
-              whileHover={{ y: -10 }}
-              className="group relative flex flex-col overflow-hidden rounded-2xl glass transition-shadow duration-300 hover:shadow-[var(--shadow-glow)]"
-            >
-              <div
-                className={`relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br ${p.accent}`}
+            <motion.div key={p.slug} variants={staggerItem} whileHover={{ y: -10 }}>
+              <Link
+                to="/projects/$slug"
+                params={{ slug: p.slug }}
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl glass transition-shadow duration-300 hover:shadow-[var(--shadow-glow)]"
               >
-                <div className="absolute inset-0 grid-pattern opacity-30" />
-                <span className="relative px-6 text-center text-lg font-bold text-white/95">
-                  {p.title}
-                </span>
-                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
-              </div>
-
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-base font-semibold">{p.title}</h3>
-                {p.subtitle && (
-                  <p className="mt-0.5 text-xs font-medium text-primary">
-                    {p.subtitle}
-                  </p>
-                )}
-                <p className="mt-2 flex-1 text-sm text-muted-foreground">
-                  {p.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {p.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-md border border-border bg-secondary/30 px-2.5 py-1 text-xs text-foreground/80"
+                <div className="relative h-44 overflow-hidden">
+                  {p.image ? (
+                    <img
+                      src={p.image}
+                      alt={`${p.title} preview`}
+                      loading="lazy"
+                      width={1024}
+                      height={640}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div
+                      className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${p.accent}`}
                     >
-                      {t}
+                      <span className="px-6 text-center text-lg font-bold text-white/95">
+                        {p.title}
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  {p.status === "building" && (
+                    <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                      Building
                     </span>
-                  ))}
+                  )}
+                  <span className="absolute right-3 top-3 rounded-full bg-black/55 px-2.5 py-1 text-xs font-medium text-white/90 backdrop-blur">
+                    {p.category}
+                  </span>
                 </div>
-                <div className="mt-5 flex items-center gap-3 border-t border-border pt-4">
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-primary"
-                  >
-                    Demo <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <Github className="h-4 w-4" /> GitHub
-                  </a>
+
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-base font-semibold">{p.title}</h3>
+                  {p.subtitle && (
+                    <p className="mt-0.5 text-xs font-medium text-primary">
+                      {p.subtitle}
+                    </p>
+                  )}
+                  <p className="mt-2 flex-1 text-sm text-muted-foreground">
+                    {p.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {p.tech.slice(0, 4).map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-md border border-border bg-secondary/30 px-2.5 py-1 text-xs text-foreground/80"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-5 flex items-center gap-1.5 border-t border-border pt-4 text-sm font-medium text-primary">
+                    View Details
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </div>
                 </div>
-              </div>
-            </motion.article>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
 
-        {/* Other projects */}
-        <div className="mt-20">
-          <Reveal className="text-center">
-            <h3 className="text-xl font-semibold">
-              <span className="text-gradient">Other Projects</span>
-            </h3>
-          </Reveal>
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {OTHER_PROJECTS.map((p) => (
-              <motion.a
-                key={p.title}
-                href="#"
-                variants={staggerItem}
-                whileHover={{ y: -4 }}
-                className="group flex items-center justify-between rounded-xl glass px-5 py-4 transition-shadow hover:shadow-[var(--shadow-glow)]"
-              >
-                <div>
-                  <p className="text-sm font-semibold">{p.title}</p>
-                  <p className="text-xs text-muted-foreground">{p.tag}</p>
-                </div>
-                <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
-              </motion.a>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-12 flex justify-center"
+        >
+          <MagneticButton as="a" href="/projects">
+            View All Projects
+            <ArrowRight className="h-4 w-4" />
+          </MagneticButton>
+        </motion.div>
       </div>
     </section>
   );

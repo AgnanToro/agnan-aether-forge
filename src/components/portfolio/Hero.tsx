@@ -158,7 +158,7 @@ export function Hero() {
       </div>
 
       <motion.button
-        onClick={() => scrollTo("#building")}
+        onClick={() => scrollTo("#about")}
         aria-label="Scroll down"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
