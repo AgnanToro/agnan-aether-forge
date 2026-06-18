@@ -126,7 +126,7 @@ function ProjectDetail() {
 
               <h2 className="mt-10 text-xl font-semibold">Key Highlights</h2>
               <ul className="mt-4 space-y-3">
-                {p.highlights.map((h) => (
+                {p.highlights.map((h: string) => (
                   <li key={h} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full gradient-primary text-primary-foreground">
                       <Check className="h-3 w-3" />
