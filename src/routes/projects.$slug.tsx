@@ -143,7 +143,7 @@ function ProjectDetail() {
                   Tech Stack
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {p.tech.map((t) => {
+                  {p.tech.map((t: string) => {
                     const { Icon, color } = getSkillIcon(t);
                     return (
                       <span
