@@ -95,7 +95,7 @@
     radial-gradient(55% 60% at 15% 12%, var(--aurora-1) 0%, transparent 60%),
     radial-gradient(45% 55% at 85% 18%, var(--aurora-3) 0%, transparent 55%),
     radial-gradient(60% 60% at 50% 100%, var(--aurora-2) 0%, transparent 60%);
-  --gradient-primary: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
+  --gradient-primary: linear-gradient(135deg, #f8fafc 0%, #7c3aed 100%);
   --gradient-text: linear-gradient(120deg, #130924 0%, #4c1d95 55%, #7c3aed 100%);
   --shadow-glow: 0 0 0 1px rgba(76, 29, 149, 0.15), 0 18px 50px -12px rgba(76, 29, 149, 0.45);
   --shadow-soft: 0 10px 40px -16px rgba(19, 9, 36, 0.25);
@@ -120,7 +120,7 @@
   --popover-foreground: #f8fafc;
 
   --primary: #7c3aed;
-  --primary-foreground: #7c3aed;
+  --primary-foreground: #f8fafc;
 
   --secondary: #26124a;
   --secondary-foreground: #f8fafc;

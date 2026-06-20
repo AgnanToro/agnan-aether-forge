@@ -35,10 +35,10 @@ export function About() {
           <div>
             <Reveal>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Mahasiswa Teknik Informatika Universitas Islam Sultan Agung dengan minat pada Full
-                Stack Development, Backend Engineering, Artificial Intelligence, dan NLP. Memiliki
-                pengalaman magang industri dan pengalaman membangun berbagai sistem enterprise serta
-                aplikasi berbasis web modern.
+                Mahasiswa Teknik Informatika di Universitas Islam Sultan Agung,
+                berspesialisasi dalam pengembangan full-stack dengan minat yang besar pada Kecerdasan Buatan.
+                Terampil dalam mengubah masalah kompleks menjadi solusi sederhana dan elegan melalui kode yang bersih, kolaborasi, dan desain yang berfokus pada pengguna.
+                Memiliki dasar yang kuat dalam algoritma, struktur data, dan alur kerja tim yang fleksibel.
               </p>
             </Reveal>
 

@@ -15,7 +15,7 @@ import {
 import { MagneticButton } from "./ui";
 import { AuroraBackground } from "./effects";
 
-const ROLES = ["Full Stack Developer", "Backend Engineer", "AI Enthusiast"];
+const ROLES = ["Full Stack Developer", "Backend Developer", "AI Enthusiast"];
 
 function useTypewriter(words: string[]) {
   const [index, setIndex] = useState(0);
@@ -139,10 +139,12 @@ export function Hero() {
           className="mt-9 flex flex-wrap items-center justify-center gap-3"
         >
           <MagneticButton onClick={() => scrollTo("#projects")}>View Projects</MagneticButton>
-          <MagneticButton variant="outline">
-            <Download className="h-4 w-4" />
-            Download Resume
-          </MagneticButton>
+          <a href="/Agnan_Toro_CV.pdf" download>
+            <MagneticButton variant="outline">
+              <Download className="h-4 w-4" />
+              Download Resume
+            </MagneticButton>
+          </a>
           <MagneticButton variant="ghost" onClick={() => scrollTo("#contact")}>
             <Mail className="h-4 w-4" />
             Contact Me

@@ -13,13 +13,13 @@ export const Route = createFileRoute("/projects/")({
       {
         name: "description",
         content:
-          "Daftar lengkap proyek Agnan Toro: aplikasi enterprise, platform AI, sistem kesehatan, dan produk web modern.",
+          "Daftar lengkap proyek Agnan Toro: Berbagai proyek yang saya kembangkan selama perkuliahan, magang, dan pembelajaran mandiri.",
       },
       { property: "og:title", content: "All Projects — Agnan Toro" },
       {
         property: "og:description",
         content:
-          "Daftar lengkap proyek Agnan Toro: aplikasi enterprise, platform AI, dan produk web modern.",
+          "Daftar lengkap proyek Agnan Toro: Berbagai proyek yang saya kembangkan selama perkuliahan, magang, dan pembelajaran mandiri.",
       },
     ],
   }),
@@ -36,7 +36,7 @@ function AllProjects() {
           <SectionHeading
             eyebrow="Portfolio"
             title="All Projects"
-            subtitle="Kumpulan proyek yang telah dan sedang saya kerjakan, dari aplikasi enterprise hingga produk berbasis AI."
+            subtitle="Berbagai proyek yang saya kembangkan selama perkuliahan, magang, dan pembelajaran mandiri."
           />
 
           <motion.div

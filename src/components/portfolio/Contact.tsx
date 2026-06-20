@@ -73,7 +73,7 @@ export function Contact() {
               href={`mailto:${SOCIALS.email}`}
               className="group flex items-center gap-4 rounded-2xl glass p-5 transition-shadow hover:shadow-[var(--shadow-glow)]"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--gradient-primary)] text-primary-foreground">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--gradient-primary)] text-primary">
                 <Mail className="h-5 w-5" />
               </div>
               <div>

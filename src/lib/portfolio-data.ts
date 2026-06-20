@@ -4,6 +4,15 @@ import internifyImg from "../assets/projects/internify.jpg";
 import sibacaImg from "../assets/projects/sibaca.jpg";
 import kickpayImg from "../assets/projects/kickpay.jpg";
 import bumdesImg from "../assets/projects/bumdes.jpg";
+import blogspaceImg from "../assets/projects/blogspace.jpg";
+import seaCateringImg from "../assets/projects/seacatering.jpg";
+import ahliwarisImg from "../assets/projects/ahliwaris.jpg";
+import hmTifImg from "../assets/projects/hmtif.jpg";
+import productivemeImg from "../assets/projects/productiveme.jpg";
+import skpiImg from "../assets/projects/skpi.jpg";
+import raizenImg from "../assets/projects/raizen.jpg";
+import weddingINVImg from "../assets/projects/wedding.jpg";
+import sitealraImg from "../assets/projects/sitealra.jpg";
 
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -24,36 +33,36 @@ export const ABOUT_FACTS = [
 
 export const EXPERIENCES = [
   {
+    role: "Lab Assistant — OOP",
+    company: "UNISSULA",
+    period: "September - Januari 2026",
+    description:
+      "Membantu mahasiswa memahami konsep inti OOP seperti kelas, objek, pewarisan, dan polimorfisme. Serta mendukung penilaian, sesi debugging, dan diskusi kelas untuk meningkatkan hasil pembelajaran.",
+    tech: ["Java", "OOP", "Teaching"],
+  },
+  {
     role: "Backend Developer Intern",
     company: "Dafidea Technocraft",
-    period: "2025",
+    period: "September - Desember 2025",
     description:
       "Membangun dan memelihara REST API serta arsitektur backend untuk produk SaaS internal dengan fokus pada performa dan keandalan.",
-    tech: ["Laravel", "MySQL", "REST API", "Docker"],
+    tech: ["Laravel", "Vue", "Gitlab", "Intertia.js", "Jam.Dev", "MySQL", "Tailwind CSS"],
   },
   {
     role: "Full Stack Developer Intern",
     company: "BID TIK Polda Jawa Tengah",
-    period: "2024",
+    period: "September - November  2025",
     description:
       "Mengembangkan sistem internal end-to-end, dari antarmuka pengguna hingga logika backend dan integrasi database.",
-    tech: ["Laravel", "Vue", "Inertia", "MySQL"],
+    tech: ["Laravel", "React", "Tailwind CSS", "MySQL"],
   },
   {
     role: "Backend Developer",
-    company: "BUMDES Sarimarta",
-    period: "2024",
+    company: "BUMDes Sarimarta (Pengabdian Masyarakat HMTIF - FTI UNISSULA)",
+    period: "Juli - Agustus 2025",
     description:
-      "Merancang sistem manajemen keuangan untuk badan usaha desa dengan pelaporan dan kontrol akses yang aman.",
-    tech: ["Laravel", "MySQL", "REST API"],
-  },
-  {
-    role: "Lab Assistant — OOP",
-    company: "UNISSULA",
-    period: "2024",
-    description:
-      "Mendampingi mahasiswa dalam praktikum Pemrograman Berorientasi Objek serta menyusun materi dan penilaian.",
-    tech: ["Java", "OOP", "Teaching"],
+      "Mengembangkan backend sistem manajemen keuangan BUMDes Sarimarta dalam program pengabdian masyarakat HMTIF untuk membantu digitalisasi pencatatan dan pelaporan keuangan.",
+    tech: ["CodeIgniter 4", "MySQL", "Bootstrap 5", "PhpSpreadsheet", "DomPDF"],
   },
 ];
 
@@ -73,20 +82,22 @@ export interface Project {
   github?: string;
   demo?: string;
   featured: boolean;
+  githubLabel?: string;
+  demoLabel?: string;
 }
 
 export const PROJECTS: Project[] = [
-   {
+  {
     slug: "internify",
     title: "Internify",
     subtitle: "AI Internship Recommendation Platform",
     category: "AI Platform",
-    year: "2025",
+    year: "2026",
     status: "building",
     description:
       "Platform rekomendasi magang berbasis AI yang mencocokkan mahasiswa dengan peluang relevan.",
     overview:
-      "Internify menggunakan sistem rekomendasi untuk mencocokkan profil, skill, dan minat mahasiswa dengan lowongan magang yang paling relevan. Setiap rekomendasi disertai skor kecocokan sehingga mahasiswa dapat memprioritaskan peluang terbaik.",
+      "Internify merupakan project UAS untuk mata kuliah Sistem Pendukung Keputusan, Internify menggunakan model saw, toopsis dan sistem rekomendasi AI untuk mencocokkan profil, skill, dan minat mahasiswa dengan lowongan magang yang paling relevan. Setiap rekomendasi disertai skor kecocokan sehingga mahasiswa dapat memprioritaskan peluang terbaik.",
     highlights: [
       "Recommendation engine berbasis profil & skill mahasiswa",
       "Match score untuk setiap lowongan magang",
@@ -96,20 +107,118 @@ export const PROJECTS: Project[] = [
     tech: ["Laravel", "React", "Recommendation System", "Python"],
     accent: "from-[#5b21b6] to-[#8b5cf6]",
     image: internifyImg,
-    github: "https://github.com/",
-    demo: "#",
+    github: undefined,
+    githubLabel: "Private Repository",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
+    featured: true,
+  },
+  {
+    slug: "Wedding-Invitation-Website",
+    title: "Wedding Invitation Website",
+    subtitle: "Custom Wedding Invitation Platform",
+    category: "Web Development",
+    year: "2026",
+    status: "completed",
+    description:
+      "Website undangan pernikahan digital yang menyediakan informasi acara, galeri foto, cerita pasangan, dan konfirmasi kehadiran tamu.",
+    overview:
+      "Website undangan pernikahan berbasis web yang dirancang untuk memudahkan penyebaran informasi acara secara digital. Platform menyediakan detail acara, galeri foto, peta lokasi, buku tamu, serta fitur RSVP untuk konfirmasi kehadiran tamu secara online.",
+    highlights: [
+      "Informasi acara akad dan resepsi dalam satu halaman",
+      "Galeri foto dan cerita pasangan",
+      "Integrasi peta lokasi acara",
+      "Fitur RSVP untuk konfirmasi kehadiran tamu",
+    ],
+    tech: ["Next.Js", "Tailwind CSS", "Supabase"],
+    accent: "from-[#5b21b6] to-[#8b5cf6]",
+    image: weddingINVImg,
+    github: "https://github.com/AgnanToro/Wedding",
+    demo: "https://azis-laeli-weddinginvitation.vercel.app/",
+    featured: true,
+  },
+  {
+    slug: "sibaca",
+    title: "SIBACA",
+    subtitle: "Sistem Balance Cairan Terintegrasi",
+    category: "Healthcare System",
+    year: "2026",
+    status: "completed",
+    description:
+      "Sistem kesehatan untuk memantau keseimbangan cairan pasien secara real-time dan terintegrasi.",
+    overview:
+      "SIBACA membantu tenaga medis memantau intake dan output cairan pasien secara real-time. Data tercatat secara terstruktur dan tervisualisasi sehingga perawat dapat mengambil keputusan klinis lebih cepat dan akurat.",
+    highlights: [
+      "Pencatatan intake & output cairan pasien real-time",
+      "Visualisasi tren balance cairan per periode",
+    ],
+    tech: ["React", "Healthcare System", "Supabase", "Tailwind CSS"],
+    accent: "from-[#4c1d95] to-[#6d28d9]",
+    image: sibacaImg,
+    github: "https://github.com/AgnanToro/Sibaca",
+    demo: "https://sibaca-sistem-balance-cairan.vercel.app/",
+    featured: true,
+  },
+  {
+    slug: "sitealra",
+    title: "SiteAlra",
+    subtitle: "AI-Powered Website Builder for UMKM",
+    category: "AI SaaS Platform",
+    year: "2026",
+    status: "completed",
+    description:
+      "Platform pembuatan website berbasis AI yang membantu UMKM membangun, mengelola, dan mengembangkan kehadiran digital secara lebih cepat.",
+    overview:
+      "SiteAlra memungkinkan pelaku UMKM membuat website profesional tanpa keahlian teknis yang mendalam. Dilengkapi dengan SIRA (SiteAlra Intelligent Response Assistant), platform ini membantu pengguna dalam pembuatan konten, pengelolaan website, dan pengembangan strategi digital bisnis secara efisien.",
+    highlights: [
+      "Pembuatan website profesional dengan bantuan AI",
+      "SIRA AI Assistant untuk mendukung kebutuhan bisnis pengguna",
+      "Dashboard manajemen website yang intuitif dan mudah digunakan",
+      "Desain responsif dan optimal untuk berbagai perangkat",
+      "Integrasi autentikasi modern dan layanan cloud",
+    ],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Gemini AI", "Vercel"],
+    accent: "from-[#4c1d95] to-[#7c3aed]",
+    image: sitealraImg,
+    github: "https://github.com/AgnanToro/sitealra",
+    demo: "https://site-alra.vercel.app/",
+    featured: true,
+  },
+  {
+    slug: "kick-and-pay",
+    title: "Kick & Pay",
+    category: "Internship Project",
+    year: "2025",
+    status: "completed",
+    description:
+      "Platform manajemen komunitas sepak bola untuk penjadwalan, pembayaran, dan koordinasi anggota.",
+    overview:
+      "Kick & Pay merupakan platform digital yang dirancang untuk membantu komunitas olahraga seperti sepak bola, futsal, dan mini soccer dalam mengelola aktivitas tim secara lebih efisien. Sistem menyediakan fitur pengelolaan anggota, pembayaran iuran, penjadwalan pertandingan, laporan keuangan, serta komunikasi tim dalam satu platform terintegrasi. Selama menjalani program magang di Dafidea Technocraft, saya berkontribusi dalam meningkatkan kualitas dan stabilitas aplikasi melalui perbaikan bug, penyempurnaan alur pembuatan event, validasi data, peningkatan proses autentikasi, serta optimalisasi responsivitas antarmuka berdasarkan hasil pengujian QA.",
+    highlights: [
+      "Manajemen anggota dan aktivitas komunitas olahraga",
+      "Pengelolaan pembayaran dan laporan keuangan tim",
+      "Penyempurnaan workflow pembuatan event dan validasi data",
+      "Peningkatan stabilitas sistem dan responsivitas antarmuka",
+    ],
+    tech: ["Laravel", "Vue.js", "Inertia.js", "Tailwind CSS", "MySQL"],
+    accent: "from-[#312e81] to-[#4c1d95]",
+    image: kickpayImg,
+    github: undefined,
+    githubLabel: "Private Repository",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: true,
   },
   {
     slug: "helpdesk-ticketing",
     title: "Helpdesk Internal Ticketing System",
-    category: "Enterprise Web App",
+    category: "Internship Project",
     year: "2025",
     status: "completed",
     description:
-      "Platform tiket internal untuk pelacakan, eskalasi, dan resolusi permintaan dukungan secara terstruktur.",
+      "Project Magang saya di BID TIK Polda Jawa Tengah berupa sistem helpdesk internal untuk pengelolaan tiket, penugasan teknisi, dan pelacakan progres pekerjaan.",
     overview:
-      "Sistem helpdesk internal yang membantu tim support mengelola permintaan pengguna dari awal hingga selesai. Setiap tiket memiliki status, prioritas, dan jalur eskalasi yang jelas, lengkap dengan dashboard analitik untuk memantau beban kerja dan waktu penyelesaian.",
+      "Helpdesk merupakan proyek yang saya kembangkan selama magang di BID TIK Polda Jawa Tengah untuk mendukung proses pelaporan dan penanganan tiket secara terstruktur. Sistem mencakup alur lengkap mulai dari pembuatan tiket oleh pengguna, validasi admin, penugasan teknisi, pelaporan progres, hingga penyelesaian pekerjaan dengan dukungan dokumentasi dan ekspor laporan.",
     highlights: [
       "Alur tiket end-to-end: open, in-progress, escalated, resolved",
       "Role-based access untuk agent, supervisor, dan admin",
@@ -119,237 +228,230 @@ export const PROJECTS: Project[] = [
     tech: ["Laravel", "React", "TypeScript", "MySQL"],
     accent: "from-[#4c1d95] to-[#7c3aed]",
     image: helpdeskImg,
-    github: "https://github.com/",
-    demo: "#",
+    github: "https://github.com/AgnanToro/Helpdesk",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: true,
   },
   {
     slug: "hcms-kpi",
     title: "HCMS Performance & KPI Management",
-    category: "Enterprise Web App",
-    year: "2024",
-    status: "completed",
-    description:
-      "Sistem manajemen kinerja dan KPI karyawan dengan dashboard analitik dan alur penilaian.",
-    overview:
-      "Human Capital Management System yang berfokus pada pengukuran kinerja karyawan melalui indikator KPI yang terukur. Manajer dapat menetapkan target, melakukan penilaian periodik, dan melihat visualisasi performa tim secara menyeluruh.",
-    highlights: [
-      "Penetapan dan tracking KPI per individu dan tim",
-      "Alur penilaian periodik dengan approval bertingkat",
-      "Dashboard analitik performa dengan grafik interaktif",
-      "Ekspor laporan kinerja untuk evaluasi manajemen",
-    ],
-    tech: ["Laravel", "Vue", "Inertia", "MySQL"],
-    accent: "from-[#26124a] to-[#4c1d95]",
-    image: hcmsImg,
-    github: "https://github.com/",
-    demo: "#",
-    featured: true,
-  },
- 
-  {
-    slug: "sibaca",
-    title: "SIBACA",
-    subtitle: "Sistem Balance Cairan Terintegrasi",
-    category: "Healthcare System",
+    category: "Internship Project",
     year: "2025",
     status: "completed",
     description:
-      "Sistem kesehatan untuk memantau keseimbangan cairan pasien secara real-time dan terintegrasi.",
+      "Project Magang saya di Dafidea Technocraft berupa sistem Human Capital Management untuk pengelolaan KPI, reviewer, dan proses evaluasi kinerja karyawan.",
     overview:
-      "SIBACA membantu tenaga medis memantau intake dan output cairan pasien secara real-time. Data tercatat secara terstruktur dan tervisualisasi sehingga perawat dapat mengambil keputusan klinis lebih cepat dan akurat.",
+      "HCMS (Human Capital Management System) merupakan aplikasi web internal yang digunakan untuk mengelola proses evaluasi kinerja karyawan dan KPI dalam organisasi. Sistem ini mengintegrasikan data karyawan, penugasan reviewer, periode penilaian, serta workflow evaluasi yang terhubung dengan sistem ERP perusahaan. Selama menjalani program magang di Dafidea Technocraft, saya berkontribusi pada pengembangan backend modul Reviewer Management dan Performance Period, termasuk implementasi logika penugasan reviewer, validasi data, operasi CRUD, serta workflow yang mendukung proses penilaian kinerja secara terstruktur dan efisien.",
     highlights: [
-      "Pencatatan intake & output cairan pasien real-time",
-      "Visualisasi tren balance cairan per periode",
-      "Peringatan ketika balance melewati ambang aman",
-      "Integrasi data antar unit perawatan",
+      "Manajemen reviewer dan mapping penilaian",
+      "Pengaturan periode evaluasi KPI",
+      "Validasi dan pengelolaan workflow penilaian",
+      "Integrasi data karyawan dengan sistem internal",
     ],
-    tech: ["Laravel", "React", "Healthcare System", "MySQL"],
-    accent: "from-[#4c1d95] to-[#6d28d9]",
-    image: sibacaImg,
-    github: "https://github.com/AgnanToro/Sibaca",
-    demo: "https://sibaca-sistem-balance-cairan.vercel.app/",
+    tech: ["Laravel", "Vue", "Inertia.js", "SCCS", "MySQL"],
+    accent: "from-[#26124a] to-[#4c1d95]",
+    image: hcmsImg,
+    github: undefined,
+    githubLabel: "Private Repository",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: true,
   },
-  {
-    slug: "kick-and-pay",
-    title: "Kick & Pay",
-    category: "Community Platform",
-    year: "2024",
-    status: "completed",
-    description:
-      "Platform manajemen komunitas sepak bola untuk penjadwalan, pembayaran, dan koordinasi anggota.",
-    overview:
-      "Kick & Pay mempermudah komunitas sepak bola mengelola jadwal pertandingan, iuran anggota, dan pembayaran dalam satu aplikasi. Pengurus dapat memantau status pembayaran sementara anggota mendapat pengingat otomatis.",
-    highlights: [
-      "Penjadwalan pertandingan dan konfirmasi kehadiran",
-      "Manajemen iuran dan pembayaran anggota",
-      "Rekap keuangan komunitas otomatis",
-      "Pengingat pembayaran untuk anggota",
-    ],
-    tech: ["Laravel", "React", "Payments", "MySQL"],
-    accent: "from-[#312e81] to-[#4c1d95]",
-    image: kickpayImg,
-    github: "https://github.com/",
-    demo: "#",
-    featured: true,
-  },
+
   {
     slug: "bumdes-finance",
     title: "BUMDES Sarimarta Finance",
     category: "Finance System",
-    year: "2024",
+    year: "2025",
     status: "completed",
     description:
       "Sistem manajemen keuangan badan usaha desa dengan pencatatan transaksi dan pelaporan otomatis.",
     overview:
-      "Sistem keuangan untuk Badan Usaha Milik Desa yang mencatat seluruh transaksi pemasukan dan pengeluaran secara rapi. Laporan keuangan dihasilkan otomatis sehingga pengelolaan dana desa menjadi transparan dan akuntabel.",
+      "Sistem manajemen keuangan untuk BUMDes yang dikembangkan dalam program Pengabdian Masyarakat HMTIF x HIMA PGSD UNISSULA. Sistem mendukung pencatatan transaksi, pengelolaan kategori keuangan, perhitungan saldo otomatis, serta pembuatan laporan dalam format Excel dan PDF.",
     highlights: [
       "Pencatatan transaksi pemasukan & pengeluaran",
       "Laporan keuangan otomatis per periode",
       "Kontrol akses aman untuk pengurus desa",
       "Dashboard ringkasan kondisi keuangan",
     ],
-    tech: ["Laravel", "MySQL", "Reporting"],
+    tech: ["CodeIgniter 4", "MySQL", "Bootstrap 5", "PhpSpreadsheet", "DomPDF"],
     accent: "from-[#26124a] to-[#7c3aed]",
     image: bumdesImg,
-    github: "https://github.com/",
-    demo: "#",
+    github: undefined,
+    githubLabel: "Private Repository",
+    demo: "https://sarimarta.id/",
     featured: true,
   },
   {
     slug: "blogspace",
     title: "BlogSpace",
     category: "Web Platform",
-    year: "2024",
+    year: "2025",
     status: "completed",
     description:
-      "Platform blogging modern dengan editor kaya fitur dan manajemen konten yang rapi.",
+      "Take-home project untuk proses seleksi magang yang menampilkan implementasi CRUD, autentikasi, dan manajemen konten blog.",
     overview:
-      "BlogSpace adalah platform menulis dan publikasi artikel dengan editor yang nyaman, kategori, dan halaman publik yang SEO-friendly.",
+      "BlogSpace merupakan aplikasi manajemen blog yang memungkinkan pengguna membuat, mengelola, mengedit, dan menghapus artikel melalui antarmuka yang sederhana dan responsif. Sistem dilengkapi dengan autentikasi pengguna, kontrol akses berbasis peran, serta pengelolaan konten yang terstruktur untuk mendukung alur publikasi artikel. Proyek ini dikembangkan sebagai technical assessment dalam proses seleksi magang di Dafidea Technocraft dengan fokus pada implementasi CRUD, autentikasi, desain basis data relasional, dan praktik pengembangan aplikasi full-stack.",
     highlights: [
-      "Editor artikel dengan dukungan rich text",
-      "Manajemen kategori dan tag",
-      "Halaman publik yang ramah SEO",
+      "Manajemen artikel dengan operasi CRUD",
+      "Autentikasi dan otorisasi berbasis peran",
+      "Desain basis data relasional",
+      "Implementasi arsitektur full-stack Laravel dan Vue.js",
     ],
-    tech: ["Laravel", "Blade", "MySQL"],
+    tech: ["Laravel", "Vue.js", "MySQL", "Tailwind CSS "],
     accent: "from-[#4c1d95] to-[#7c3aed]",
-    github: "https://github.com/",
+    image: blogspaceImg,
+    github: "https://github.com/AgnanToro/BlogApp-Laravel12",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: false,
   },
   {
     slug: "sea-catering",
     title: "SEA Catering",
     category: "Web App",
-    year: "2024",
+    year: "2025",
     status: "completed",
     description: "Aplikasi pemesanan katering dengan paket langganan dan manajemen menu.",
     overview:
-      "SEA Catering memudahkan pelanggan memesan paket katering dan langganan makanan, lengkap dengan manajemen menu dan pesanan untuk admin.",
+      "Aplikasi web full-stack yang dikembangkan untuk COMPfest Technical Challenge, menawarkan layanan pengiriman makanan sehat berbasis langganan Pengguna dapat menelusuri paket makanan (Diet, Protein, Royal) menyesuaikan jadwal pengiriman (sarapan, makan siang, makan malam), dan mengelola preferensi diet. Dasbor admin mencakup analitik bisnis, manajemen langganan, dan penanganan kontak.",
     highlights: [
       "Paket langganan makanan",
       "Manajemen menu dan pesanan",
       "Alur checkout yang sederhana",
     ],
-    tech: ["Laravel", "React", "MySQL"],
+    tech: ["Codeigniter 4", "MySQL", "Tailwind CSS", "Alpine.js", "Chart.js"],
     accent: "from-[#26124a] to-[#4c1d95]",
-    github: "https://github.com/",
+    image: seaCateringImg,
+    github: "https://github.com/AgnanToro/sea-catering/tree/master",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: false,
   },
   {
     slug: "islamic-inheritance-calculator",
     title: "Islamic Inheritance Calculator",
     category: "Utility",
-    year: "2023",
+    year: "2025",
     status: "completed",
     description: "Kalkulator pembagian waris Islam (faraidh) yang akurat dan mudah digunakan.",
     overview:
-      "Aplikasi yang menghitung pembagian harta waris sesuai kaidah faraidh berdasarkan ahli waris yang dimasukkan, dengan penjelasan hasil yang transparan.",
+      "Aplikasi web yang dirancang untuk membantu perhitungan dan pembagian harta waris berdasarkan hukum waris Islam (Faraid). Sistem mendukung perhitungan bagian ahli waris sesuai ketentuan syariah, termasuk mekanisme Faraid dan Asabah, dengan mempertimbangkan berbagai struktur hubungan keluarga. Selain menyediakan hasil perhitungan secara otomatis, aplikasi juga dilengkapi materi edukasi mengenai hukum waris Islam serta fitur pembuatan laporan untuk memudahkan pengguna memahami proses pembagian warisan secara transparan dan akurat.",
     highlights: [
       "Perhitungan faraidh otomatis",
       "Penjelasan rincian pembagian",
       "Antarmuka yang ramah pengguna",
     ],
-    tech: ["JavaScript", "React"],
+    tech: ["JavaScript", "CodeIgniter 4", "MySQL", "Tailwind CSS", "Docker"],
     accent: "from-[#5b21b6] to-[#8b5cf6]",
-    github: "https://github.com/",
+    image: ahliwarisImg,
+    github: "https://github.com/AgnanToro/kalkulator-ahli-waris",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: false,
   },
   {
     slug: "hm-tif-website",
     title: "HM-TIF Website",
     category: "Organization",
-    year: "2023",
+    year: "2025",
     status: "completed",
     description:
-      "Website resmi himpunan mahasiswa Teknik Informatika dengan profil dan publikasi kegiatan.",
+      "Website resmi HM-TIF UNISSULA untuk menampilkan profil organisasi, struktur kepengurusan, program kerja, dan informasi kegiatan secara digital.",
     overview:
-      "Website organisasi yang menampilkan profil himpunan, program kerja, berita, dan dokumentasi kegiatan mahasiswa.",
+      "Website resmi HM-TIF UNISSULA yang dikembangkan sebagai media informasi dan profil organisasi bagi mahasiswa, dosen, dan pihak terkait. Platform ini menyajikan struktur kepengurusan, program kerja, visi misi, dokumentasi kegiatan, serta berbagai informasi organisasi dalam tampilan yang responsif dan mudah diakses. Saya berkontribusi dalam pengembangan dan pemeliharaan website secara menyeluruh, termasuk pengembangan antarmuka, pengelolaan konten, pembaruan data anggota, serta peningkatan konsistensi dan responsivitas tampilan di berbagai perangkat.",
     highlights: [
+      "Pengembangan dan pemeliharaan website organisasi",
       "Profil organisasi dan program kerja",
       "Publikasi berita dan kegiatan",
       "Galeri dokumentasi",
     ],
-    tech: ["Laravel", "Blade", "MySQL"],
+    tech: ["React", "Bootstrap 5", "MySQL"],
     accent: "from-[#4c1d95] to-[#6d28d9]",
-    github: "https://github.com/",
+    image: hmTifImg,
+    github: undefined,
+    githubLabel: "Private Repository",
+    demo: "https://hmtifunissula.com/",
     featured: false,
   },
   {
     slug: "e-lapor-spti",
     title: "E-Lapor SPTI",
     category: "Reporting",
-    year: "2024",
+    year: "2025",
     status: "completed",
-    description: "Sistem pelaporan digital untuk mempermudah pengajuan dan pemantauan laporan.",
+    description:
+      "Platform pelaporan digital untuk membantu anggota serikat pekerja melaporkan pelanggaran, insiden keselamatan kerja, dan permasalahan ketenagakerjaan secara terstruktur.",
     overview:
-      "E-Lapor SPTI memungkinkan pengguna mengirim laporan secara digital dan memantau status tindak lanjutnya secara transparan.",
+      "E-Lapor SPTI merupakan platform pelaporan digital yang dirancang untuk mendukung proses pelaporan berbagai permasalahan ketenagakerjaan, seperti pelanggaran hak pekerja, insiden keselamatan kerja, hingga kasus pelecehan di lingkungan kerja. Sistem memungkinkan anggota mengirim laporan beserta bukti pendukung, memantau perkembangan laporan, serta berkomunikasi dengan administrator. Selain itu, platform menyediakan manajemen laporan berbasis peran untuk membantu proses penanganan kasus secara lebih terorganisir, transparan, dan mudah diakses.",
     highlights: [
-      "Pengajuan laporan digital",
-      "Pemantauan status tindak lanjut",
-      "Rekap laporan untuk pengelola",
+      "Pelaporan pelanggaran dan permasalahan ketenagakerjaan",
+      "Unggah bukti pendukung dan pelacakan status laporan",
+      "Manajemen laporan berbasis peran",
+      "Komunikasi antara pelapor dan administrator",
     ],
-    tech: ["Laravel", "MySQL", "Reporting"],
+    tech: ["CodeIgniter 4", "MySQL", "Tailwind CSS", "Docker"],
     accent: "from-[#312e81] to-[#4c1d95]",
-    github: "https://github.com/",
+    image: skpiImg,
+    github:
+      "https://github.com/AgnanToro/E-Lapor-SPTI-Sistem-Pelaporan-Serikat-Pekerja-Transportasi-Indonesia",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: false,
   },
   {
     slug: "productiveme",
     title: "ProductiveMe",
     category: "Productivity",
-    year: "2023",
+    year: "2025",
     status: "completed",
-    description: "Aplikasi produktivitas untuk manajemen tugas dan kebiasaan harian.",
+    description:
+      "Aplikasi manajemen tugas berbasis web yang membantu pengguna mengatur, memantau, dan menganalisis produktivitas melalui dashboard dan visualisasi data.",
     overview:
-      "ProductiveMe membantu pengguna mengelola daftar tugas, melacak kebiasaan, dan tetap fokus pada target harian mereka.",
+      "ProductiveMe merupakan aplikasi manajemen tugas berbasis web yang dirancang untuk membantu pengguna mengelola aktivitas harian secara lebih terorganisir. Sistem memungkinkan pengguna membuat, mengelompokkan, memperbarui, dan memantau tugas berdasarkan kategori yang berbeda. Selain fitur manajemen tugas, aplikasi juga menyediakan dashboard analitik yang menampilkan statistik dan visualisasi progres untuk membantu pengguna memahami pola produktivitas mereka. Dengan dukungan autentikasi pengguna, pengelolaan data yang terisolasi, dan antarmuka responsif, ProductiveMe dapat digunakan dengan nyaman di berbagai perangkat.",
     highlights: [
-      "Manajemen tugas dan prioritas",
-      "Pelacakan kebiasaan harian",
-      "Ringkasan progres mingguan",
+      "Manajemen tugas dengan operasi CRUD",
+      "Pengelompokan tugas berdasarkan kategori",
+      "Dashboard analitik dan visualisasi produktivitas",
+      "Autentikasi pengguna dan isolasi data per akun",
     ],
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+    tech: ["CodeIgniter 3", "MySQL", "Bootstrap/CSS3", "Docker"],
     accent: "from-[#26124a] to-[#7c3aed]",
-    github: "https://github.com/",
+    image: productivemeImg,
+    github: "https://github.com/AgnanToro/productiveme",
+    demo: undefined,
+    demoLabel: "Live Demo Tidak Tersedia",
     featured: false,
   },
   {
     slug: "raizen",
     title: "Raizen",
-    category: "Web App",
+    category: "Travel Platform",
     year: "2024",
     status: "completed",
     description: "Aplikasi web modern dengan fokus pada pengalaman pengguna yang mulus.",
     overview:
-      "Raizen adalah aplikasi web yang menekankan antarmuka modern, performa cepat, dan pengalaman pengguna yang mulus.",
+      "Raizen merupakan proyek pengembangan web yang dibuat sebagai bagian dari tugas perkuliahan. Aplikasi ini dirancang untuk membantu pengguna menemukan informasi destinasi wisata Indonesia, melakukan pemesanan perjalanan, dan memperoleh referensi melalui konten wisata yang tersedia dalam platform.",
     highlights: [
-      "Antarmuka modern dan responsif",
-      "Performa cepat",
-      "Komponen yang dapat digunakan ulang",
+      "Eksplorasi dan pencarian destinasi wisata",
+      "Sistem pemesanan dengan pilihan tanggal dan jumlah pengunjung",
+      "Artikel dan konten informasi perjalanan",
+      "Antarmuka responsif dan interaktif",
     ],
-    tech: ["React", "TypeScript", "Tailwind CSS"],
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "jQuery",
+      "Slick Carousel",
+      "Font Awesome",
+      "Google Fonts",
+    ],
     accent: "from-[#4c1d95] to-[#7c3aed]",
-    github: "https://github.com/",
+    image: raizenImg,
+    github: "https://github.com/AgnanToro/raizen",
+    demo: "https://agnantoro.github.io/raizen/home.html",
     featured: false,
   },
 ];

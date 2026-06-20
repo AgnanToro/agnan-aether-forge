@@ -149,7 +149,7 @@ function ProjectDetail() {
               </div>
 
               <div className="flex flex-col gap-3">
-                {p.demo && (
+                {p.demo ? (
                   <a
                     href={p.demo}
                     target="_blank"
@@ -159,8 +159,16 @@ function ProjectDetail() {
                     Live Demo
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
+                ) : (
+                  <button
+                    disabled
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-secondary/20 px-5 py-3 text-sm font-semibold text-muted-foreground cursor-not-allowed"
+                  >
+                    {p.demoLabel || "Live Demo Tidak Tersedia"}
+                  </button>
                 )}
-                {p.github && (
+
+                {p.github ? (
                   <a
                     href={p.github}
                     target="_blank"
@@ -170,11 +178,18 @@ function ProjectDetail() {
                     <Github className="h-4 w-4" />
                     View Code
                   </a>
+                ) : (
+                  <button
+                    disabled
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-secondary/20 px-5 py-3 text-sm font-semibold text-muted-foreground cursor-not-allowed"
+                  >
+                    <Github className="h-4 w-4" />
+                    {p.githubLabel || "Private Repository"}
+                  </button>
                 )}
               </div>
             </aside>
           </div>
-
           {related.length > 0 && (
             <div className="mt-16 border-t border-border pt-10">
               <h2 className="text-xl font-semibold">More Projects</h2>
