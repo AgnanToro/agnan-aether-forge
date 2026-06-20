@@ -59,7 +59,7 @@ export function LoadingScreen({ onDone }: { onDone: () => void }) {
               <span className="text-gradient">Agnan Toro</span>
             </motion.h1>
             <p className="mt-1 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-              Full Stack · AI
+              Full Stack Developer
             </p>
 
             <div className="mt-8 h-[3px] w-56 overflow-hidden rounded-full bg-secondary/60">

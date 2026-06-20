@@ -37,30 +37,18 @@ export function Skills() {
                   </div>
                   <h3 className="text-base font-semibold">{group.title}</h3>
                 </div>
-                <div className="mt-5 space-y-4">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {group.skills.map((skill) => {
                     const { Icon: SkillIcon, color } = getSkillIcon(skill.name);
+
                     return (
-                      <div key={skill.name}>
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="flex items-center gap-2 font-medium">
-                            <span className="flex h-7 w-7 items-center justify-center rounded-md border border-border bg-secondary/40">
-                              <SkillIcon className="h-4 w-4" style={{ color }} />
-                            </span>
-                            {skill.name}
-                          </span>
-                          <span className="text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-secondary/60">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="h-full rounded-full gradient-primary"
-                          />
-                        </div>
-                      </div>
+                      <span
+                        key={skill.name}
+                        className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary/30 px-3 py-2 text-sm font-medium text-foreground/90 transition-colors hover:border-primary hover:text-primary"
+                      >
+                        <SkillIcon className="h-4 w-4" style={{ color }} />
+                        {skill.name}
+                      </span>
                     );
                   })}
                 </div>

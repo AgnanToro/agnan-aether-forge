@@ -20,7 +20,7 @@ export const NAV_LINKS = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Achievements", href: "#achievements" },
+  { label: "Certifications", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -516,40 +516,36 @@ export const TECH_MARQUEE = [
 ];
 
 export const STATS = [
-  { value: 25, suffix: "+", label: "Projects Completed" },
-  { value: 4, suffix: "", label: "Internship Experiences" },
+  { value: 15, suffix: "+", label: "Projects Completed" },
+  { value: 2, suffix: "", label: "Internship Experiences" },
   { value: 18, suffix: "+", label: "Technologies Used" },
-  { value: 12, suffix: "+", label: "Academic Projects" },
+  { value: 5, suffix: "+", label: "Academic Projects" },
 ];
 
 export const ACHIEVEMENTS = [
   {
-    title: "AWS AI Academy",
+    title: "Fundamental Deep Learning - Dicoding",
     description:
-      "Menyelesaikan program AWS AI Academy yang berfokus pada machine learning dan layanan AI di cloud.",
+      "Mempelajari penerapan deep learning untuk klasifikasi gambar dan teks, sistem rekomendasi, time series, hingga Generative AI.",
     tag: "Certification",
   },
   {
-    title: "Technical Workshops",
-    description: "Aktif mengikuti workshop pengembangan perangkat lunak modern, DevOps, dan AI.",
-    tag: "Workshops",
-  },
-  {
-    title: "Professional Certifications",
-    description: "Sertifikasi di bidang web development, backend engineering, dan dasar-dasar AI.",
-    tag: "Certifications",
-  },
-  {
-    title: "Coding Competitions",
+    title: "Machine Learning for Beginners - Dicoding",
     description:
-      "Berpartisipasi dalam kompetisi pemrograman dan hackathon tingkat kampus dan nasional.",
-    tag: "Competitions",
+      "Mempelajari konsep machine learning mulai dari supervised learning, unsupervised learning, hingga evaluasi dan peningkatan performa model.",
+    tag: "Certification",
   },
   {
-    title: "Academic Excellence",
+    title: "Google Developer Groups on Campus UIN Jakarta",
     description:
-      "Mempertahankan prestasi akademik yang tinggi dengan berbagai proyek riset terapan.",
-    tag: "Academic",
+      "Mengikuti kelas rutin dan kegiatan komunitas yang berfokus pada Artificial Intelligence, Machine Learning, dan Web Development.",
+    tag: "Community",
+  },
+  {
+    title: "HM-TIF UNISSULA",
+    description:
+      "Terlibat dalam kepanitiaan dan pengembangan program kerja organisasi, termasuk pelatihan AI, kompetisi web programming, serta pengabdian masyarakat.",
+    tag: "Organization",
   },
 ];
 

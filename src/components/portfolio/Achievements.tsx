@@ -11,8 +11,8 @@ export function Achievements() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Recognition"
-          title="Achievements"
-          subtitle="Sertifikasi, kompetisi, dan pencapaian akademik sepanjang perjalanan saya."
+          title="Certifications & Organizations"
+          subtitle="Sertifikasi, organisasi, dan komunitas yang mendukung pengembangan kemampuan teknis dan profesional saya"
         />
 
         <motion.div
