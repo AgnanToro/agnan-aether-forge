@@ -101,7 +101,6 @@ export const PROJECTS: Project[] = [
     highlights: [
       "Recommendation engine berbasis profil & skill mahasiswa",
       "Match score untuk setiap lowongan magang",
-      "Manajemen lowongan untuk perusahaan mitra",
       "Filter cerdas berdasarkan lokasi, bidang, dan durasi",
     ],
     tech: ["Laravel", "React", "Recommendation System", "Python"],
